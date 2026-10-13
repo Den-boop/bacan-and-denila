@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Crumbs | Bakery POS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand"><div class="brand-icon">✦</div><div><strong>Campus Crumbs</strong><small>BAKERY & COFFEE · POINT OF SALE</small></div></div>
+        <div class="header-right"><span class="status-dot"></span> Ready to serve <span id="todayDate"></span></div>
+    </header>
+    <main class="page">
+        <section class="welcome"><div><span class="eyebrow">FRESHLY BAKED, EVERY DAY</span><h1>A little warmth in every order.</h1><p>Select your bakery favorites, review the order, and check out in seconds.</p></div><div class="welcome-icon" aria-hidden="true">🥐</div></section>
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+        <div class="layout">
+            <section class="menu-section" aria-labelledby="menuHeading"><div class="section-heading"><div><span class="eyebrow">OUR SELECTION</span><h2 id="menuHeading">Bakery Menu</h2></div><span class="count-label">6 delicious picks</span></div><div id="productGrid" class="product-grid"></div></section>
+            <aside class="checkout" aria-label="Order and payment">
+                <div class="checkout-head"><div><span class="eyebrow">CURRENT TRANSACTION</span><h2>Your Order <span id="cartCount" class="cart-count">0</span></h2></div><span class="basket-icon">🛍️</span></div>
+                <div id="cartItems" class="cart-items"><div class="empty-cart">Your basket is empty.<small>Choose something tasty to get started.</small></div></div>
+                <div class="totals"><div class="total-line"><span>Items</span><span id="itemCount">0</span></div><div class="total-line grand-total"><strong>Total due</strong><strong id="totalAmount">₱0.00</strong></div></div>
+                <form id="paymentForm" novalidate><label for="cashInput" class="payment-label">Cash payment</label><div class="cash-wrap"><span>₱</span><input id="cashInput" type="number" step="0.01" min="0" placeholder="Enter cash amount" inputmode="decimal" autocomplete="off"></div><p id="paymentError" class="error" role="alert"></p><button id="payButton" type="submit" class="primary-button">Confirm Payment <span>→</span></button></form>
+                <button id="newTransaction" class="secondary-button" type="button">↻ New Transaction</button>
+            </aside>
+        </div>
+        <section id="receiptSection" class="receipt-section" hidden><div class="section-heading"><div><span class="eyebrow">PAYMENT COMPLETE</span><h2>Digital Receipt</h2></div></div><div id="receipt" class="receipt"></div></section>
+    </main>
+    <footer>Campus Crumbs Bakery · Made fresh for campus life ☕</footer>
+</body>
+</html>
