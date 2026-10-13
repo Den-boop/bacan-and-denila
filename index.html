@@ -21,7 +21,16 @@
                 <div class="checkout-head"><div><span class="eyebrow">CURRENT TRANSACTION</span><h2>Your Order <span id="cartCount" class="cart-count">0</span></h2></div><span class="basket-icon">🛍️</span></div>
                 <div id="cartItems" class="cart-items"><div class="empty-cart">Your basket is empty.<small>Choose something tasty to get started.</small></div></div>
                 <div class="totals"><div class="total-line"><span>Items</span><span id="itemCount">0</span></div><div class="total-line grand-total"><strong>Total due</strong><strong id="totalAmount">₱0.00</strong></div></div>
-                <form id="paymentForm" novalidate><label for="cashInput" class="payment-label">Cash payment</label><div class="cash-wrap"><span>₱</span><input id="cashInput" type="number" step="0.01" min="0" placeholder="Enter cash amount" inputmode="decimal" autocomplete="off"></div><p id="paymentError" class="error" role="alert"></p><button id="payButton" type="submit" class="primary-button">Confirm Payment <span>→</span></button></form>
+                <form id="paymentForm" novalidate><label for="cashInput" class="payment-label">Cash payment</label><div class="cash-wrap"><span>₱</span><input
+    id="cashInput"
+    type="number"
+    step="0.01"
+    min="0"
+    placeholder="Enter cash amount"
+    inputmode="decimal"
+    autocomplete="off"
+    aria-describedby="paymentError"
+></div><p id="paymentError" class="error" role="alert"></p><button id="payButton" type="submit" class="primary-button">Confirm Payment <span>→</span></button></form>
                 <button id="newTransaction" class="secondary-button" type="button">↻ New Transaction</button>
             </aside>
         </div>
